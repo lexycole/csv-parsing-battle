@@ -55,6 +55,11 @@ Run the Go Script
 cd read-csv-go
 ```
 ```go
+go run sales.go
+```
+
+Running the Benchmarks
+```go
 time go run sales.go
 ```
 
@@ -67,12 +72,16 @@ cd read-csv-nestjs
 ```npm
 npm install
 ```
-Build the project
+Build & run the project
 
 ```npm
 npm run build
 ```
-Run the project
+```npm
+node dist/main.js
+```
+
+Running the Benchmarks
 ```npm
 time node dist/main.js
 ```
@@ -83,7 +92,11 @@ Run the PHP Script
 cd read-csv-php
 ```
 ```php
-time php run sales.php
+php sales.php
+```
+Running the Benchmarks
+```php
+time php sales.php
 ```
 
 ## Results
