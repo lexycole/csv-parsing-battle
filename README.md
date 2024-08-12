@@ -1,13 +1,14 @@
-# CSV File Processing Benchmark:  Golang vs NestJS vs PHP
-This repository contains scripts to benchmark the performance of Golang, NestJS, and PHP  in processing large CSV files. The benchmark compares the execution time, memory usage, and ease of implementation for each language.
+# CSV File Processing Benchmark:  Golang vs NestJS vs PHP vs Python
+This repository contains scripts to benchmark the performance of Golang, NestJS, PHP, and Python  in processing large CSV files. The benchmark compares the execution time, memory usage, and ease of implementation for each language.
 
 ## Introduction
-Processing large CSV files efficiently is a common requirement in many applications, from data analysis to ETL (Extract, Transform, Load) processes. This repository benchmarks the performance of three popular programming languages—PHP, Golang, and NestJS—in handling large CSV files.
+Processing large CSV files efficiently is a common requirement in many applications, from data analysis to ETL (Extract, Transform, Load) processes. This repository benchmarks the performance of three popular programming languages—Golang, NestJS, PHP, and Python—in handling large CSV files.
 
 ## Test Environment
 - Golang 1.22.x
 - Node.js 22.x with NestJS
 - PHP 8.3.x
+- Python 3.12.x
 
 ## Project Tree
  * [generate-csv](./generate-csv)
@@ -23,7 +24,9 @@ Processing large CSV files efficiently is a common requirement in many applicati
      * ...
    * ...
  * [read-csv-php](./read-csv-php)
-   * [sales.php](./read-csv-go/sales.php)
+   * [sales.php](./read-csv-php/sales.php)
+ * [read-csv-python](./read-csv-python)
+   * [sales.py](./read-csv-python/sales.py)
  * [.gitignore](./.gitignore)
  * [LICENSE](./LICENSE)
  * [README.md](./README.md)
@@ -98,22 +101,43 @@ Running the Benchmarks
 ```php
 time php sales.php
 ```
+### Read CSV Python
+Run the Python Script
+```py
+cd read-csv-python
+```
+```py
+python sales.py #windows
+#or
+python3 sales.py #mac/linux
+```
+Running the Benchmarks
+```py
+time python sales.py #windows
+#or
+time python3 sales.py #mac/linux
+```
 
 ## Results
 Here you should include the results of your benchmarks, such as execution time and any other relevant metrics.
 
 ### Golang
-- Execution time: X.XX seconds
+- Go Execution time: X.XX seconds
 - Total Sales: $Y.YY
 - Top Product: Product Z with sales $ZZ.ZZ
 
 ### NestJS
-- Execution time: X.XX seconds
+- NestJS Execution time: X.XX seconds
 - Total Sales: $Y.YY
 - Top Product: Product Z with sales $ZZ.ZZ
 
 ### PHP
-- Execution time: X.XX seconds
+- PHP Execution time: X.XX seconds
+- Total Sales: $Y.YY
+- Top Product: Product Z with sales $ZZ.ZZ
+
+### Python
+- Python Execution time: X.XX seconds
 - Total Sales: $Y.YY
 - Top Product: Product Z with sales $ZZ.ZZ
 
