@@ -24,11 +24,15 @@ func main() {
 	totalSales := 0.0
 	productSales := make(map[string]float64)
 
+	var topProduct string
+	var topSales float64
+
 	for {
 		line, err := reader.Read()
 		if err != nil {
 			break
 		}
+
 		productID := line[1]
 		quantity, _ := strconv.Atoi(line[2])
 		price, _ := strconv.ParseFloat(line[3], 64)
@@ -36,14 +40,11 @@ func main() {
 
 		totalSales += total
 		productSales[productID] += total
-	}
 
-	var topProduct string
-	var topSales float64
-	for product, sales := range productSales {
-		if sales > topSales {
-			topProduct = product
-			topSales = sales
+		// Update topProduct and topSales in the same loop
+		if productSales[productID] > topSales {
+			topProduct = productID
+			topSales = productSales[productID]
 		}
 	}
 
