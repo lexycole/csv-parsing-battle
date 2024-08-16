@@ -88,6 +88,21 @@ Running the Benchmarks
 ```npm
 time node dist/main.js
 ```
+Running in postman
+```
+http://localhost:3000/csv/parse
+```
+
+### Read CSV NodeJS
+
+```npm
+cd read-csv-nodejs
+```
+
+Running the Benchmarks
+```npm
+time node index.js
+```
 
 ### Read CSV PHP
 Run the PHP Script
@@ -128,6 +143,11 @@ Here you should include the results of your benchmarks, such as execution time a
 
 ### NestJS
 - NestJS Execution time: X.XX seconds
+- Total Sales: $Y.YY
+- Top Product: Product Z with sales $ZZ.ZZ
+
+### NodeJS
+- Nodejs Execution time: X.XX seconds
 - Total Sales: $Y.YY
 - Top Product: Product Z with sales $ZZ.ZZ
 
