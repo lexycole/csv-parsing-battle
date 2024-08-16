@@ -27,7 +27,7 @@ const start = hrtime()
 
 // read the CSV file
 /** @type {string} data */
-const data = readFileSync("../sales_data.csv", "utf8").slice(51) // remove the header row
+const data = readFileSync("../generate-csv/sales_data.csv", "utf8").slice(51) // remove the header row
 
 // split the data into rows
 /** @type {string[]} rows */
@@ -53,10 +53,10 @@ let productWithHighestSalesAmount = null
 const productAndSalesAmount = {}
 
 // iterate through the rows
-for (let i = 0; i < rows.length; i++) {
+for (const element of rows) {
     // split the row into columns
     /** @type {string[]} columns */
-    const columns = rows[i].split(",")
+    const columns = element.split(",")
 
     // calculate the sales amount
     /** @type {number} salesAmount */
