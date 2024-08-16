@@ -91,4 +91,4 @@ const end = hrtime(start)
 // log the statistics
 console.log("Nodejs Execution Time:", end[0] + (end[1] / NS_PER_SEC))
 console.log("Total Sales: $", totalSalesAmount)
-console.log(`Top Product: ${productWithHighestSalesAmount} with sales $${productWithHighestSalesAmount}`)
+console.log(`Top Product: ${productWithHighestSalesAmount} with sales $${highestSalesAmount}`)
